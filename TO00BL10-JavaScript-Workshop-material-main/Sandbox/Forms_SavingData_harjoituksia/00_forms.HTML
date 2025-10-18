@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tuntiharjoitus</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Tuntiharjoitus</h1>
+    <hr />
+    <p>In this exercise we will practice the art of DOM Scripting with JavaScript. Use the lecture-material as a
+        reference guide side by side these exercises. It might also be a good idea to save the lines of code you write
+        during the exercises for later use. </p>
+
+    <hr />
+
+    <h2>Exercise 3: Book Order</h2>
+    <p data-line="27">In many cases, developer has to maintain and develop code written by someone else. Look at the
+        HTML code and JavaScript code below. Study how does it work and what is the logic behind it.</p>
+    <p data-line="29">Then add following features to the code:</p>
+    <p data-line="31">a) the values read from the text boxes are stored as strings. Modify the code to store the
+        quantity as an integer and the price, tax and discount as floats.</p>
+    <p data-line="33">b) modify the JS code to double the discount applied when the quantity ordered is greater than 100
+        items</p>
+    <p data-line="35">c) modify the HTML form to include a shipping field, and include this value in the total
+        calculation in shopping.js.</p>
+    <p>&nbsp;</p>
+    <div style="display: flex; justify-content: center; align-items: center;"></div>
+    <fieldset>
+        <p>Calculate a bulk book order.</p>
+        <div>
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" value="1" min="1" required>
+        </div>
+        <div>
+            <label for="price">Price (€) Per Unit</label>
+            <input type="number" name="price" id="price" value="1.00" required>
+        </div>
+        <div>
+            <label for="tax">VAT (%)</label>
+            <input type="number" name="tax" id="tax" value="0.0" required>
+        </div>
+        <div>
+            <label for="discount">Discount (€)</label>
+            <input type="number" name="discount" id="discount" value="0.00" required>
+        </div>
+        <div>
+            <label for="shipping">Shipping (€) </label>
+            <input type="number" name="shipping" id="shipping" value="0.00" required>
+        </div>
+        <div>
+            <label for="total">Total</label>
+            <input type="number" name="total" id="total" value="">
+        </div>
+        <div>
+            <input type="submit" value="Laske" id="submit-calculate">
+        </div>
+    </fieldset>
+    </div>
+    <button id="sshow">Show orders</button>
+
+    <hr />
+    <div id="taulu"></div>
+
+    <script src="./js/shopping.js">
+
+
+    </script>
+</body>
+
+</html>

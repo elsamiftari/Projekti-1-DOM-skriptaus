@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Workshop 10 HOF</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // JavaScript goes here
+    </script>
+</head>
+
+<body class="ws10">
+    <h1 id="workshop-hof-higher-order-functions">Workshop HOF: Higher order functions</h1>
+    <p>In this exercise we will practice the use of JavaScript higher order functions (HOF). </p>
+    <h2 id="exercise-1">Exercise 1</h2>
+    <p>In this example, will will exercise Map() function. </p>
+    <p>Define users, which is an array of five (5) objects representing users. Each object has three properties:
+        firstName, lastName, and age. Please ensure that 2 of the users are younger than 30 years. </p>
+    <pre><code class="lang-sh">
+    const users = [{ <span class="hljs-string">firstName:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">25</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jane'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">30</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jack'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">35</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jill'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">40</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Joe'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">45</span> },
+    ];
+    </code></pre>
+    <p>We are mapping over each user using the map() method to extract the properties firstName and lastName.</p>
+    <p>The callback function takes a single argument user which represents an element in the users array (an object).
+    </p>
+    <p>The function concatenates the firstName and lastName properties of the user object creating a new array with
+        users first and last name. The original users array remains unchanged.</p>
+    <p>Log the new array to console. </p>
+    <h2 id="exercise-2">Exercise 2</h2>
+    <p>In this example, will will exercise Filter() function. </p>
+    <p>Define users, which is an array of 5 objects representing users. Each object has three properties: firstName,
+        lastName, and age. Please ensure that 2 of the users are younger than 30 years. </p>
+    <pre><code class="lang-sh">
+    const users = [{ <span class="hljs-string">firstName:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">25</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jane'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">30</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jack'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">35</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Jill'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">40</span> },
+    { <span class="hljs-string">firstName:</span> <span class="hljs-string">'Joe'</span>, <span class="hljs-string">lastName:</span> <span class="hljs-string">'Doe'</span>, <span class="hljs-string">age:</span> <span class="hljs-number">45</span> },
+    ];
+    </code></pre>
+    <p>Filter is called on the users array and it applies a callback function to each element in the array.</p>
+    <p>The function takes a single argument, an object destructured to a single property age. This function checks if
+        age is greater than 30. If it is, the function returns true, otherwise it returns false.</p>
+    <p>When filter is called on users, it applies this function to each element in the array, creating a new array with
+        only the elements that returned true when passed to the function and returns the result. The original users
+        array remains unchanged.</p>
+    <p>Log the new array to console. </p>
+    <h2 id="exercise-3">Exercise 3</h2>
+    <p>In this example, will will exercise Reduce() function. </p>
+    <p>We have two arguments max and curr in the callback function. Notice we will not pass the second parameter in the
+        reduce() method this time. So, the default value will be the first element in the array, which you need to
+        define first before the callback function definition.</p>
+    <pre><code class="lang-sh">let numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">20</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">60</span>, <span class="hljs-number">1</span>];
+    </code></pre>
+    <p>The callback function first checks if the current element curr is greater than the current maximum value max. If
+        it is, it updates the value of max to be the current element. If it is not, max is not updated. Finally, the
+        function returns the value of max.</p>
+    <p>In this case, the reduce() method will start by setting max to value of the first element of the array and curr
+        to second element. It will then check if 20 is greater than 5, which it is, so it updates max to 20.</p>
+    <p>It will then set curr to third element and check if it is greater than max, and if it is, so it updates max to
+        curr.</p>
+    <p>It will continue this process until it has processed all the elements in the array. The final value of max will
+        be the maximum value in the array. </p>
+    <p>Log the maximum value to console. </p>
+
+</body>

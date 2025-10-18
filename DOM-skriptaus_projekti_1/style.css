@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('Background_.jpg'); /* Päätin laittaa taustakuvan jotta olisi paremman näköinen */
+  background-size: cover;       /* täyttää koko näytön */
+  background-position: center;  /* keskittää kuvan */
+  background-repeat: no-repeat; /* ei toista kuvaa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(0,0,0,0); /* täysin läpinäkyvä */
+  padding: 20px 30px;
+  border-radius: 12px;
+  border: 2px solid #000000;
+  width: 350px;
+}
+
+#summaryList {
+  margin-top: 15px;
+  background-color: #eef3f8;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input.error-border {
+  border: 2px solid red;
+}
+
+/* Kaikki napit tumman pinkiksi */
+button {
+  background-color: #c2185b; /* tumman pinkki */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hover-efekti hieman tummempana pinkkinä */
+button:hover {
+  background-color: #880e4f;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: #f9f9f9;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}

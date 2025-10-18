@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <title>Koe tehtävä</title>
+    <meta name="keywords" content="html template">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h2>Lue arvot </h2>
+
+    <form action="#">
+        <select name="customers" onchange="showCustomer(this.value)">
+            <label for="asiakas">Valitse asiakas:</label>
+            <option value="">Valitse asiakas:</option>
+            <option value="JOUNI">Jouni Juupajoki</option>
+            <option value="MIKA">Mika Mikkeli</option>
+            <option value="SANTERI">Santeri Savonlinna</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint">Asiakkaan tiedot tulostetaan tänne...</div>
+
+    <script src="js/script3.js"></script>
+</body>
+
+</html>

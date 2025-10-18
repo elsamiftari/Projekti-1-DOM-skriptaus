@@ -1,0 +1,16 @@
+#weather-app {
+  text-align: center;
+  margin: 100px auto;
+}
+
+#weather-info {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#get-weather {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

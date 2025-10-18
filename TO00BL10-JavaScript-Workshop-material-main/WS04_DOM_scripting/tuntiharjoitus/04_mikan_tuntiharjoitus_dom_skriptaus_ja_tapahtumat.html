@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-skriptaus Workshop Harjoitus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM-skriptaus Workshop Harjoitus</h1>
+    <p>Liitetään <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git" target="_blank">Visual
+            Studio Code Githubiin</a>, ja synkataan harjoitus sinne. Ope demoaa.</p>
+
+    <div class="step">
+        <h2>Vaihe 1: Perustiedot ja valmistelut</h2>
+        <p>Luo uusi HTML-tiedosto ja lisää perusrakenne:</p>
+        <div class="code-block">
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;DOM-skriptaus Harjoitus&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;form id="userForm"&gt;
+        &lt;input type="text" id="userInput" placeholder="Kirjoita jotain..."&gt;
+        &lt;button type="submit"&gt;Lisää&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;form id="extendedForm"&gt;
+        &lt;input type="text" id="firstName" placeholder="Etunimi"&gt;
+        &lt;input type="text" id="lastName" placeholder="Sukunimi"&gt;
+        &lt;select id="dropdown"&gt;
+            &lt;option value="option1"&gt;Vaihtoehto 1&lt;/option&gt;
+            &lt;option value="option2"&gt;Vaihtoehto 2&lt;/option&gt;
+            &lt;option value="option3"&gt;Vaihtoehto 3&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button type="button" id="submitButton"&gt;Lähetä&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;table id="dataTable"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Etunimi&lt;/th&gt;
+                &lt;th&gt;Sukunimi&lt;/th&gt;
+                &lt;th&gt;Valinta&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <p>
+            Luo uusi JavaScript-tiedosto nimeltä <code>script.js</code> ja varmista,
+            että se on linkitetty HTML-tiedostoon.
+        </p>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 2: Sisällön lisääminen <code>innerHTML</code>-attribuutilla</h2>
+        <p>Avaa <code>script.js</code> ja lisää seuraava koodi:</p>
+        <div class="code-block">
+            <pre><code>const contentDiv = document.getElementById('content');
+
+contentDiv.innerHTML = `
+    &lt;h1&gt;Tervetuloa DOM-skriptauksen harjoitukseen!&lt;/h1&gt;
+    &lt;p&gt;Tämä sisältö on lisätty käyttäen innerHTML-ominaisuutta.&lt;/p&gt;
+`;</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>
+            Vaihe 3: Sisällön lisääminen <code>createElement</code>-funktiolla
+        </h2>
+        <p>Lisää <code>script.js</code>-tiedostoon seuraava koodi:</p>
+        <div class="code-block">
+            <pre><code>const newElement = document.createElement('div');
+
+newElement.innerHTML = `
+    &lt;h2&gt;Lisätty elementti&lt;/h2&gt;
+    &lt;p&gt;Tämä sisältö on lisätty käyttäen createElement-funktiota ja innerHTML-ominaisuutta.&lt;/p&gt;
+`;
+
+contentDiv.appendChild(newElement);</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 4: Yhdistä molemmat menetelmät</h2>
+        <p>Lisää <code>script.js</code>-tiedostoon seuraava koodi:</p>
+        <div class="code-block">
+            <pre><code>const anotherElement = document.createElement('div');
+
+const header = document.createElement('h3');
+header.textContent = 'Toinen lisätty elementti';
+
+const paragraph = document.createElement('p');
+paragraph.textContent = 'Tämä sisältö on lisätty käyttäen createElement-funktiota ja textContent-ominaisuutta.';
+
+anotherElement.appendChild(header);
+anotherElement.appendChild(paragraph);
+
+contentDiv.appendChild(anotherElement);</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 5: Käyttäjän syötteen käsittely</h2>
+        <p>
+            Lisää <code>script.js</code>-tiedostoon koodi, joka käsittelee lomakkeen
+            syötteen:
+        </p>
+        <div class="code-block">
+            <pre><code>const form = document.getElementById('userForm');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userInput = document.getElementById('userInput').value;
+
+    const userElement = document.createElement('p');
+    userElement.textContent = userInput;
+
+    contentDiv.appendChild(userElement);
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 6: Tyylien lisääminen JavaScriptillä</h2>
+        <p>Lisää tyylejä luotuihin elementteihin:</p>
+        <div class="code-block">
+            <pre><code>newElement.style.backgroundColor = 'lightblue';
+newElement.style.padding = '10px';
+newElement.style.borderRadius = '5px';
+
+anotherElement.style.backgroundColor = 'lightgreen';
+anotherElement.style.padding = '10px';
+anotherElement.style.borderRadius = '5px';</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 7: Elementtien poistaminen</h2>
+        <p>Lisää nappi elementtien poistamiseen:</p>
+        <div class="code-block">
+            <pre><code>const removeButton = document.createElement('button');
+removeButton.textContent = 'Poista sisältö';
+contentDiv.appendChild(removeButton);
+
+removeButton.addEventListener('click', function() {
+    contentDiv.innerHTML = '';
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 8: Dynaaminen sisällön luominen</h2>
+        <p>Luo dynaamisesti lista käyttäjän syötteistä:</p>
+        <div class="code-block">
+            <pre><code>const list = document.createElement('ul');
+contentDiv.appendChild(list);
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userInput = document.getElementById('userInput').value;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = userInput;
+
+    list.appendChild(listItem);
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>Vaihe 9: Lomakkeen luominen ja kuuntelijan lisääminen</h2>
+        <p>
+            Lisää <code>script.js</code>-tiedostoon koodi, joka käsittelee uuden
+            lomakkeen syötteen:
+        </p>
+        <div class="code-block">
+            <pre><code>const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', function() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const dropdown = document.getElementById('dropdown').value;
+
+    console.log(`Etunimi: ${firstName}, Sukunimi: ${lastName}, Valinta: ${dropdown}`);
+});</code></pre>
+        </div>
+    </div>
+    <div class="step">
+        <h2>Vaihe 10: Lomakkeen tietojen lisääminen taulukkoon</h2>
+        <p>Lisää <code>script.js</code>-tiedostoon koodi, joka lisää lomakkeen tiedot taulukkoon:</p>
+        <div class="code-block">
+            <pre><code>const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+
+submitButton.addEventListener('click', function() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const dropdown = document.getElementById('dropdown').value;
+
+    const newRow = dataTable.insertRow();
+
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+
+    cell1.textContent = firstName;
+    cell2.textContent = lastName;
+    cell3.textContent = dropdown;
+});</code></pre>
+        </div>
+</body>
+
+</html>

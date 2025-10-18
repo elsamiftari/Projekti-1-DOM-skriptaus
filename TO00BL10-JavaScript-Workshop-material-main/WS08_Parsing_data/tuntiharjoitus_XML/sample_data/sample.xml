@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+    <customer>
+        <id>1</id>
+        <name>Matti Virtanen</name>
+        <email>matti.virtanen@example.com</email>
+        <phone>+358 40 1234567</phone>
+        <address>
+            <street>TikkuKatu 1</street>
+            <city>Helsinki</city>
+            <state>Uusimaa</state>
+            <zip>00100</zip>
+        </address>
+    </customer>
+    <customer>
+        <id>2</id>
+        <name>Liisa Korhonen</name>
+        <email>liisa.korhonen@example.com</email>
+        <phone>+358 50 2345678</phone>
+        <address>
+            <street>Lummekatu 2</street>
+            <city>Espoo</city>
+            <state>Uusimaa</state>
+            <zip>02100</zip>
+        </address>
+    </customer>
+    <customer>
+        <id>3</id>
+        <name>Matti Meikäläinen</name>
+        <address>
+            <street>Isokatu 35</street>
+            <city>Helsinki</city>
+            <state>Finland</state>
+            <zip>00100</zip>
+        </address>
+        <email>matti.meikalainen@example.com</email>
+        <phone>+358 40 123 4567</phone>
+    </customer>
+    <customer>
+        <id>4</id>
+        <name>Maija Virtanen</name>
+        <address>
+            <street>Pikkukatu 10</street>
+            <city>Espoo</city>
+            <state>Finland</state>
+            <zip>02200</zip>
+        </address>
+        <email>maija.virtanen@example.com</email>
+        <phone>+358 50 765 4321</phone>
+    </customer>
+    <customer>
+        <id>5</id>
+        <name>Laura Laine</name>
+        <address>
+            <street>Rantakatu 21</street>
+            <city>Tampere</city>
+            <state>Finland</state>
+            <zip>33100</zip>
+        </address>
+        <email>laura.laine@example.com</email>
+        <phone>+358 45 678 9012</phone>
+    </customer>
+</customers>

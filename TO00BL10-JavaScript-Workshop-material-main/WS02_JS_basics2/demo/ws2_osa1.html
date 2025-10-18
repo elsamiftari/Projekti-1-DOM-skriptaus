@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop_2</title>
+</head>
+<body>
+    <script>
+        document.body.innerHTML += "<p><b>Jos minulla olisi yhdeksän tuntia puun kaatamiseen, käyttäisin ensimmäiset kuusi kirveen terottamiseen.</b><br><i>– Abraham Lincoln</i></p>";
+        function repeatingText() {
+            for (let i = 0; i < 50; i++) {
+                document.body.innerHTML += "<p>Moi miten menee</p>";
+            }
+        }
+        repeatingText();
+           
+        if (navigator.userAgent.toLowerCase().includes("firefox")) {
+            alert("You are using Firefox, redirecting you...");
+            window.location.href = "http://www.mozilla.org";
+        } else {
+            alert("You are not using Firefox, redirecting you to another page...");
+            window.location.href = "https://www.google.com"; }
+          
+   </script>
+      
+
+</body>
+
+</html>

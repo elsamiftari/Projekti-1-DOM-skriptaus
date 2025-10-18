@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Harjoitus 4</title>
+</head>
+<body>
+
+<script>
+    // Kysytään onko käyttäjä opiskelija
+    let isStudent = confirm("Oletko opiskelija?");
+
+    if(isStudent) {
+        // Bonus: kysytään nimi
+        let name = prompt("Mikä on nimesi?");
+        if(name) {
+            document.body.innerHTML = "<p>Tervetuloa, " + name + "!</p>";
+        } else {
+            document.body.innerHTML = "<p>Tervetuloa opiskelija</p>";
+        }
+    } else {
+        // Jos käyttäjä painaa Peruuta
+        document.body.innerHTML = "<p>Valitettavasti tämä sivu on tarkoitettu vain opiskelijoille</p>";
+    }
+     // Taulukko kuvien URL-osoitteista
+    const images = [
+      "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+      "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+      "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg"
+    ];
+
+    // Esimerkki: tulostetaan kaikki kuvat yksitellen
+    document.write("<h2>Kaikki kuvat:</h2>");
+    for(let i = 0; i < images.length; i++) {
+        document.write("<img src='" + images[i] + "' alt='Kuva " + (i+1) + "' style='margin:10px;'>");
+    }
+
+    // Funktio, joka näyttää satunnaisen kuvan
+    function showRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.write("<h2>Satunnainen kuva:</h2>");
+        document.write("<img src='" + images[randomIndex] + "' alt='Satunnainen kuva' style='margin:10px;'>");
+    }
+
+    // Kutsutaan funktiota, niin näytetään satunnainen kuva
+    showRandomImage();
+</script>
+
+</body>
+</html>

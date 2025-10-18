@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do app</title>
+    <!-- Linkki ulkoiseen CSS-tiedostoon -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sovelluksen otsikko -->
+      <h1>📝 Todo-app</h1>
+
+      <!-- Lomake uuden tehtävän lisäämiseen -->
+      <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Add a new task..." />
+        <button type="submit">Add</button>
+      </form>
+
+      <!-- Virheilmoitus tyhjälle tai liian lyhyelle syötteelle -->
+      <p id="error" class="error"></p>
+
+      <!-- Laskuri auki oleville tehtäville -->
+      <p id="counter" class="counter">Open tasks: 0</p>
+
+      <!-- Lista päätehtävistä -->
+      <ul id="todoList"></ul>
+
+      <!-- Active / Done napit samalla rivillä -->
+      <div id="filterButtons">
+        <button id="showAllBtn" type="button">Show all tasks</button>
+        <button id="showActiveBtn" type="button">Active</button>
+        <button id="showDoneBtn" type="button">Done</button>
+      </div>
+
+      <!-- Yhteenvetolista -->
+      <ul id="summaryList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

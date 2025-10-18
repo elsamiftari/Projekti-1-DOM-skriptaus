@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Funktio tulostaa konsoliin ja luo alert-ikkunan
+    function tulostaMoi() {
+        console.log('Nyt ollaan funktiossa!')
+        alert("Moi!")
+    }
+    function lueLomake() {
+        // Haetaan viite input-kenttään
+        let kentta1 = document.querySelectorAll('input')[0];
+        let kentta2 = document.querySelectorAll('input')[1];
+        // Haetaan kentän arvo
+        let enimi = kentta1.value
+        let snimi = kentta2.value
+
+        console.log(enimi, snimi)
+        // Asetetaan kentän arvo
+        let div = document.querySelector('div');
+        div.innerHTML += enimi + " " + snimi + "<br>"
+    }
+</script>
+
+<body>
+    <!-- Tässä luodaan H1 elementti ja kiinnitetään siihen kuuntelija -->
+    <!-- h1 onmouseover="tulostaMoi()">Hoi Maailma</h1 -->
+    <h1>Lomake</h1>
+    <input id="enimi" onfocus="console.log('Kenttä aktivoitu!') " onblur="type=console.log('Poistuit kentästä!')"
+        type="text" />
+    <input id="snimi" type="text" />
+
+    <button onclick="lueLomake()">Klikkaa minua!</button>
+
+    <div>
+        <!-- Tulostetaan tänne lomakkeen sisältö -->
+    </div>
+</body>
+
+</html>

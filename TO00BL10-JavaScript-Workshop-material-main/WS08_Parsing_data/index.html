@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My Web Page</h1>
+
+    <p>This is the first paragraph.</p>
+
+    <button>Click Me</button>
+
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            alert('Button was clicked!');
+        });
+    </script>
+</body>
+
+</html>
