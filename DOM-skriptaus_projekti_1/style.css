@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  background: rgba(0,0,0,0); /* täysin läpinäkyvä */
+  background: rgba(0,0,0,0); /* tekee kuvasta täysin läpinäkyvä */
   padding: 20px 30px;
   border-radius: 12px;
   border: 2px solid #000000;
@@ -36,14 +36,14 @@ input {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
+/*kun virhe niin näyttää borderin punaisena*/
 input.error-border {
   border: 2px solid red;
 }
 
 /* Kaikki napit tumman pinkiksi */
 button {
-  background-color: #c2185b; /* tumman pinkki */
+  background-color: #c2185b; 
   color: white;
   border: none;
   padding: 8px 12px;

@@ -1,56 +1,87 @@
 Projektin nimi ja tekijät
--Elsa Miftari (Tein yksin)
+Elsa Miftari (Tein yksin)
 
 Verkkolinkit:
 Pääset julkaistuun sovellukseen käsiksi osoitteessa google.com Linkki projektin videoesittelyyn google.com
 
 Työn jakautuminen
--Tein kaiken yksin
+Tein kaiken yksin
 
 Oma arvio työstä ja oman osaamisen kehittymisestä
-Mielestäni onnistuin... Parantamista olisi... Sovelluksesta jäi puuttumaan... Koen, että olen oppinut... Epäselväksi jäi... Antaisin itselleni pisteitä seuraavasti: xx/yy p
+
+Mielestäni onnistuin tekemään toimivan ja selkeän to-do-sovelluksen, jossa on kaikki perustoiminnot, kuten tehtävän lisääminen, sen merkitseminen tehdyksi, sen poistaminen sekä tehtävien tallentaminen selaimen localStorageen. Ulkoasukin on mielestäni tosi kivan näköinen.
+
+Parantamista olisi se, että opin tekemään tällaisen vielä nopeammin ja olisi kiva oppia enemmän juttuja ulkoa niin tehtävän teko onnistuisi paremmin.
+
+Koen, että olen oppinut paljon JavaScriptin DOM-käsittelystä, localStoragen käytöstä sekä siitä, miten HTML, CSS ja JS toimivat yhdessä.
+
+Alussa oli hankalaa saada napit toimimaan haluamani tavalla, muuta kun kysyin apua ja katoin muiden töitä ja tutoriaaleja se selkeni. 
+
+Antaisin itselleni pisteitä seuraavasti: 10/10 p
 
 Palaute opettajalle kurssista sekä itse opetuksesta tähän saakka
-Kurssi sekä lähiopetus ovat tuntuneet... Oppimistani tukisi jos...
+Kurssi sekä lähiopetus ovat tuntuneet tosi kivoilta, ja minusta on tuntunut siltä, että olen oikeasti oppinut jotain. Tämän projektin avulla huomasin, että osaan jo paljon ja että tekeminen on oikeasti kivaa. Lähiopetus on mielestäni tukenut oppimistani todella paljon.
 
 Sisällysluettelo:
+•	Tietoja sovelluksesta
+•	[Tunnetut virheet/bugit](#Tunnetut virheet/bugit)
+•	Kuvakaappaukset
+•	Teknologiat
+•	Asennus
+•	Lähestymistapa
+•	Kiitokset
+•	Lisenssi
+
 Tietoja sovelluksesta
-[Tunnetut virheet/bugit](#Tunnetut virheet/bugit)
-Kuvakaappaukset
-Teknologiat
-Asennus
-Lähestymistapa
-Kiitokset
-Lisenssi
-Tietoja sovelluksesta
-[Projektin nimi] on sovellus, joka ...
+To-Do on sovellus, joka auttaa käyttäjää järjestämään ja seuraamaan tehtäviään. Käyttäjä voi lisätä uusia tehtäviä, merkitä ne tehdyiksi sekä poistaa niitä, kun ne eivät ole enää ajankohtaisia.
 
 Tunnetut virheet/bugit
-Kerro jos tiedät sovelluksessa olevan jotain, mikä ei toimi tai toimii heikosti
+Katoin ja missään ei ollut virhettä
 
 Kuvakaappaukset
-Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta
-![Kirjoittaminen](https://unsplash.com/photos/VBPzRgd7gfc)
+url('Kuva1.png')
+url('Kuva2.png')
+url('Kuva3.png')
+url('Kuva4.png')
+Ne ei auke tässä mutta kuvat löytyy kansion sisältä
 
-Kuva: Kelly Sikkema
+Kuva: Pinterest 
 
 Teknologiat
-Kuvaa, mitä teknologioita käytettiin ja mikä oli niiden rooli projektissasi.
-Käytin seuraavia teknologioita: html, css, ...
+Käytin seuraavia teknologioita: HTML, CSS ja JavaScript.
+
+HTML muodosti sovelluksen rakenteen. Sen avulla loin eri osiot, kuten otsikon, lomakkeen tehtävien lisäämistä varten, tehtävälistan ja painikkeet (Add, Active, Done, Show All).
+
+CSS vastasi sovelluksen ulkoasusta ja tyylittelystä. Sillä määrittelin värimaailman, taustakuvan, nappien ulkoasun ja asettelun, jotta sovellus näyttäisi selkeältä ja houkuttelevalta. Sain tehtyä juuri  sellaisen kun halusin, napitkin pinkkinä!
+
+JavaScript toimi sovelluksen logiikkana. Sen avulla lisäsin tehtävät listalle, merkitsin ne tehdyiksi, laskin avoimien tehtävien määrän ja tallensin tehtävät localStorageen, jotta ne säilyvät myös sivun päivittämisen jälkeen.
+
 
 Asennus
-Kirjoita lyhyet ohjeet sovelluksen käynnistämiseen ja käyttöön. Esimerkiksi:
+✅ Sovelluksen käyttö
+1.	Kirjoita uusi tehtävä tekstikenttään ja paina Add.
+Tehtävä lisätään listalle, jossa voit:
+-	Merkitä sen tehdyksi painamalla ✔-
+-	Poistaa sen painamalla 🗑
+2.	Näet avoimien tehtävien määrän “Open tasks” -kohdassa.
+Voit suodattaa tehtäviä:
+-	Show all tasks näyttää kaikki-
+-	Active näyttää vain avoimet-
+-	Done näyttää valmiit tehtävät
 
-lataa kaikki tiedostot ja avaa index.html selaimessasi
-lataa tai kloonaa repositorio
-suorita npm install
-...
 Kiitokset
-Lista lähteistä ja esimerkeistä, joita käytit projektin aikana. Mainitse myös, jos käytit ChatGPT:tä tai muita tekoälytyökaluja koodauksen aikana ja kerro, miten ne auttoivat sinua.
+ChatGPT – käytin apuna koodin rakenteen suunnittelussa ja virheiden korjaamisessa. ChatGPT auttoi erityisesti JavaScriptin logiikassa ja sammalla jos tarvitsin jotain tietoa tai miten jokin tehdään, niin kysyin apua. 
 
-John Doe
-Beginners guide to BEM
+Omat muistiinpanot ja kurssimateriaali – hyödynsin opettajan jakamia esimerkkejä ja tehtäviä sovelluksen rakenteen ja ulkoasun suunnittelussa.
+
+Käytin myös tiktok videoita ja nettiä ideointiin ja apuun.
+
+Katsoin YouTube videoita / tutoriaaleja miten muut oli tehneet, sain inspiraatioita samalla nettiä ja GitHubia missä muut olivat laittaneet omia tekemiä to do listoja
+•	W3Schools. (n.d.). How To Create a To Do List. Saatavilla: https://www.w3schools.com/howto/howto_js_todolist.asp (Viitattu 18.10.2025).
+•	Mandefro, A. (2024). todo-app-in-javascript-html-and-css [GitHub repository]. GitHub. Saatavilla: https://github.com/Aklilu-Mandefro/todo-app-in-javascript-html-and-css (Viitattu 18.10.2025) github.com
+•	How To Create To-Do List App Using HTML CSS And JavaScript | Task App In JavaScript. 2025. YouTube. https://www.youtube.com/watch?v=G0jO8kUrg-I [Viitattu 18. lokakuuta 2025].
+•	Mandefro, A. (2023). todo-app-in-javascript-html-and-css. GitHub. Saatavilla: https://github.com/Aklilu-Mandefro/todo-app-in-javascript-html-and-css [Viitattu 18. lokakuuta 2025].
+
 Lisenssi
 Valitse projektille lisenssi seuraamalla tätä opasta.
-
 Esimerkki: MIT-lisenssi @ tekijä
