@@ -5,7 +5,7 @@ Verkkolinkit:
 Pääset julkaistuun sovellukseen käsiksi osoitteessa https://keen-belekoy-a54332.netlify.app/
 GitHub https://github.com/elsamiftari/Projekti-1-DOM-skriptaus/tree/main/DOM-skriptaus_projekti_1
 
-Linkki projektin videoesittelyyn 
+Linkki projektin videoesittelyyn https://youtu.be/Go7Efzkglm4
 
 Työn jakautuminen
 Tein kaiken yksin
