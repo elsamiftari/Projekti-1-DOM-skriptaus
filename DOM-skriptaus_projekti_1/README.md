@@ -2,7 +2,9 @@ Projektin nimi ja tekijät
 Elsa Miftari (Tein yksin)
 
 Verkkolinkit:
-Pääset julkaistuun sovellukseen käsiksi osoitteessa google.com Linkki projektin videoesittelyyn google.com
+Pääset julkaistuun sovellukseen käsiksi osoitteessa https://keen-belekoy-a54332.netlify.app/
+GitHub 
+Linkki projektin videoesittelyyn google.com
 
 Työn jakautuminen
 Tein kaiken yksin
