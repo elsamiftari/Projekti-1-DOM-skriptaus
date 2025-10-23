@@ -3,8 +3,9 @@ Elsa Miftari (Tein yksin)
 
 Verkkolinkit:
 Pääset julkaistuun sovellukseen käsiksi osoitteessa https://keen-belekoy-a54332.netlify.app/
-GitHub 
-Linkki projektin videoesittelyyn google.com
+GitHub https://github.com/elsamiftari/Projekti-1-DOM-skriptaus/tree/main/DOM-skriptaus_projekti_1
+
+Linkki projektin videoesittelyyn 
 
 Työn jakautuminen
 Tein kaiken yksin
