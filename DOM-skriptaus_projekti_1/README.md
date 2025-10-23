@@ -38,14 +38,12 @@ To-Do on sovellus, joka auttaa käyttäjää järjestämään ja seuraamaan teht
 Tunnetut virheet/bugit
 Katoin ja missään ei ollut virhettä
 
-Kuvakaappaukset
-url('Kuva1.png')
-url('Kuva2.png')
-url('Kuva3.png')
-url('Kuva4.png')
-Ne ei auke tässä mutta kuvat löytyy kansion sisältä
+Kuvakaappaukset:
+<img width="371" height="270" alt="{AAFF22A6-4F0E-4CF1-82CC-94CEDC7D6515}" src="https://github.com/user-attachments/assets/aefb9475-9557-4c47-8ccc-e3defceb5bb8" />
+<img width="372" height="351" alt="{8366C967-008A-42A5-82A6-39C6941F0004}" src="https://github.com/user-attachments/assets/b98a3643-0d8f-455b-9782-a59813d7d7b7" />
+<img width="346" height="328" alt="{F77A2227-5396-4DD0-B367-85619A23D6BE}" src="https://github.com/user-attachments/assets/b21d626e-b74e-4bfc-b542-e49d60cddc0f" />
 
-Kuva: Pinterest 
+Taustakuva: Pinterest 
 
 Teknologiat
 Käytin seuraavia teknologioita: HTML, CSS ja JavaScript.
